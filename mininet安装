@@ -1,0 +1,24 @@
+官网安装：http://mininet.org/download/
+
+在docker下的Ubuntu16.04测试安装mininet，能完成安装，但是在建立节点时无法响应。
+参考：https://hurray0.com/menu/23/
+
+使用源码安装过程：
+bash环境下先update
+之后安装sudo、git、vim、net-tools
+
+git下载mininet：
+git clone http://github.com/mininet/mininet
+cd mininet
+git checkout 2.2.2
+
+安装mininet：
+sudo ./mininet/util/install.sh -fnv
+
+验证安装：
+sudo mn
+设置网络节点及路由节点等网络情况
+
+mininet> pingall
+mininet> quit
+若网络连通则成功。
